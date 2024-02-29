@@ -38,7 +38,6 @@ class Sprite_Picture < Sprite
       
       self.bitmap = new_bitmap
       
-      print("yes") if just_shown
       # Restart animated bitmap from first frame if just shown.
       self.bitmap.replay() if just_shown
     end
