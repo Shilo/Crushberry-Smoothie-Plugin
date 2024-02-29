@@ -17,4 +17,6 @@ Add the contents of [CrushberrySmoothie.rb](CrushberrySmoothie.rb) as a new scri
     -   Animated pictures will restart to first frame when picture is changed.
 -   Event script helpers:
     -   `CrushberrySmoothie.wait(frame: integer)` - Wait in frames.
-    -   `CrushberrySmoothie.wait_for_picture(picture_id: integer)` - Wait for animated non-looping picture to finish.
+    -   `CrushberrySmoothie.wait_seconds(seconds: float)` - Wait for time in seconds.
+    -   `CrushberrySmoothie.wait_milliseconds(milliseconds: integer)` - Wait for time in milliseconds.
+    -   `CrushberrySmoothie.wait_picture(picture_id: integer)` - Wait for animated non-looping picture to finish.
