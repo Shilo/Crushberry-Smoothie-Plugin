@@ -8,7 +8,7 @@ RPG Maker VX Ace Plugin (Script) for Crushberry Spectrumdon game.
 
 ## Installation
 
-Add the contents of [CrushberrySmoothie.rb](main/CrushberrySmoothie.rb) as a new script named "CrushberrySmoothie" at the bottom of `Tools > Script Editor (F11) > Materials`.
+Add the contents of [CrushberrySmoothie.rb](CrushberrySmoothie.rb?raw=1) as a new script named "CrushberrySmoothie" at the bottom of `Tools > Script Editor (F11) > Materials`.
 
 ## Features
 
