@@ -24,3 +24,23 @@ class Bitmap
     self.goto_and_play(0) if self.animated?
   end
 end
+
+class Sprite_Picture < Sprite
+  # Overwrite update transfer origin bitmap to restart animated bitmap from first frame.
+  def update_bitmap
+    if @picture.name.empty?
+      self.bitmap = nil
+    else
+      new_bitmap = Cache.picture(@picture.name)
+      
+      # Check if the bitmap is changed.
+      just_shown = self.bitmap != new_bitmap
+      
+      self.bitmap = new_bitmap
+      
+      print("yes") if just_shown
+      # Restart animated bitmap from first frame if just shown.
+      self.bitmap.replay() if just_shown
+    end
+  end
+end
