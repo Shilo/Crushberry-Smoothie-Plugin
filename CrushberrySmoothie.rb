@@ -16,8 +16,20 @@ class CrushberrySmoothie
     frames.times { Fiber.yield }
   end
 
+  # Wait for seconds.
+  def self.wait_seconds(seconds)
+    start_time = Time.now
+    Fiber.yield while Time.now - start_time < seconds
+  end
+
+  # Wait for milliseconds.
+  def self.wait_milliseconds(milliseconds)
+    seconds = milliseconds / 1000.0
+    wait_seconds(seconds)
+  end
+
   # Wait for animated looping picture to finish playing.
-  def self.wait_for_picture(picture_id)
+  def self.wait_picture(picture_id)
     Fiber.yield while $sprite_pictures_play_state[picture_id] == true
   end
 end
